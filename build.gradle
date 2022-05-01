@@ -20,10 +20,19 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
 	runtimeOnly 'io.r2dbc:r2dbc-postgresql'
 	runtimeOnly 'org.postgresql:postgresql'
+
+	runtimeOnly 'org.flywaydb:flyway-core'
+	runtimeOnly 'org.postgresql:postgresql'
+	runtimeOnly 'org.springframework:spring-jdbc'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'com.squareup.okhttp3:mockwebserver'
 	testImplementation 'org.testcontainers:junit-jupiter'
 	testImplementation 'org.testcontainers:postgresql'
 	testImplementation 'org.testcontainers:r2dbc'
